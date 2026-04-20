@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\PoliController;
 use App\Http\Controllers\Admin\DokterController;
 use App\Http\Controllers\Admin\PasienController;
 use App\Http\Controllers\Admin\ObatController;
+use App\Http\Controllers\Dokter\JadwalPeriksaController;
+use App\Http\Controllers\Pasien\PasienPoliController; // <-- TAMBAHAN
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [AuthController::class, 'showLogin']);
@@ -23,16 +25,9 @@ Route::middleware(['auth', 'role:admin'])->prefix('admin')->group(function () {
         return view('admin.dashboard');
     })->name('admin.dashboard');
 
-    // CRUD Poli
     Route::resource('polis', PoliController::class);
-
-    // CRUD Dokter
     Route::resource('dokter', DokterController::class);
-
-    // CRUD Pasien
     Route::resource('pasien', PasienController::class);
-
-    // CRUD Obat
     Route::resource('obat', ObatController::class);
 
 });
@@ -45,6 +40,8 @@ Route::middleware(['auth', 'role:dokter'])->prefix('dokter')->group(function () 
         return view('dokter.dashboard');
     })->name('dokter.dashboard');
 
+    Route::resource('jadwal-periksa', JadwalPeriksaController::class);
+
 });
 
 
@@ -54,5 +51,10 @@ Route::middleware(['auth', 'role:pasien'])->prefix('pasien')->group(function () 
     Route::get('/dashboard', function () {
         return view('pasien.dashboard');
     })->name('pasien.dashboard');
+
+    // TAMBAHAN DARI KODE KAMU
+    Route::get('/daftar', [PasienPoliController::class, 'get'])->name('pasien.daftar');
+
+    Route::post('/daftar', [PasienPoliController::class, 'submit'])->name('pasien.daftar.submit');
 
 });

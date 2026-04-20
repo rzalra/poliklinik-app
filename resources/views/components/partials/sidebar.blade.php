@@ -99,6 +99,12 @@
                 Dashboard Pasien
             </a>
 
+            <a href="{{ route('pasien.daftar') }}"
+                class="{{ $baseLink }} {{ request()->routeIs('pasien.daftar') ? $active : $inactive }}">
+                <i class="fas fa-house-medical w-4 text-center"></i>
+                Pendaftaran Periksa
+            </a>
+
         </div>
         @endif
 
@@ -118,10 +124,15 @@
                 Dashboard Dokter
             </a>
 
+        {{-- TAMBAHAN MENU --}}
+            <a href="{{ route('jadwal-periksa.index') }}"
+                class="{{ $baseLink }} {{ request()->routeIs('jadwal-periksa.*') ? $active : $inactive }}">
+                <i class="fas fa-stethoscope w-4 text-center"></i>
+                Jadwal Periksa
+            </a>
+
         </div>
         @endif
-
-    </div>
 
 
     {{-- ================= LOGOUT ================= --}}
