@@ -26,7 +26,7 @@
         <div class="card-body p-0">
 
             <div class="overflow-x-auto">
-                <table class="table table-zebra w-full">
+                <table class="table table-zebra w-full/">
 
                     {{-- Head --}}
                     <thead class="bg-slate-100 text-slate-500 text-xs uppercase tracking-wider">

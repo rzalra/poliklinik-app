@@ -41,7 +41,7 @@ class PasienController extends Controller
             'role' => 'pasien',
         ]);
 
-        return redirect()->route('pasien.index')->with('message', 'Data Pasien Berhasil di Tambah')->with('type', 'success');
+        return redirect()->route('pasien.index')->with('message', 'Data Pasien berhasil di Tambah')->with('type', 'success');
     }
 
     public function edit(User $pasien)
@@ -65,7 +65,7 @@ class PasienController extends Controller
             'alamat' => $request->alamat,
             'no_ktp' => $request->no_ktp,
             'no_hp' => $request->no_hp,
-            'email' => $request->email,
+            'email' => $request->email
         ];
 
         if($request->filled('password')) {
@@ -79,8 +79,7 @@ class PasienController extends Controller
             ->with('type', 'success');
     }
 
-    public function destroy(User $pasien)
-    {
+    public function destroy(User $pasien){
         $pasien->delete();
         return redirect()->route('pasien.index')
             ->with('message', 'Data Pasien Berhasil Di Hapus')

@@ -1,4 +1,4 @@
-x-layouts.app title="Riwayat Pasien">
+<x-layouts.app title="Riwayat Pasien">
 
     {{-- Header --}}
     <div class="flex items-center justify-between mb-6">

@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\PoliController;
 use App\Http\Controllers\Admin\ObatController;
 use App\Http\Controllers\Dokter\JadwalPeriksaController;
 use App\Http\Controllers\Dokter\PeriksaPasienController;
-use App\Http\Controllers\Dokter\RiwayatPasienController;
+use App\Http\Controllers\Dokter\RiwayatPasienController; // Tambahan Controller
 use App\Http\Controllers\Pasien\PoliController as PasienPoliController;
 use Illuminate\Support\Facades\Route;
 

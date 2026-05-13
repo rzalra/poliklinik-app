@@ -42,7 +42,7 @@ class ObatController extends Controller
     {
         $obat = Obat::findOrFail($id);
         return view('admin.obat.edit')->with([
-            'obat' => $obat
+            'obat'=> $obat
         ]);
     }
 
@@ -62,7 +62,7 @@ class ObatController extends Controller
         ]);
 
         return redirect()->route('obat.index')
-            ->with('message', 'Data Obat Berhasil di edit')
+            ->with('message', 'Data Obat berhasil di edit')
             ->with('type', 'success');
     }
 
@@ -72,7 +72,7 @@ class ObatController extends Controller
         $obat->delete();
 
         return redirect()->route('obat.index')
-            ->with('message', 'Data Obat Berhasil di Hapus')
+            ->with('message', 'Data Obat berhasil di Hapus')
             ->with('type', 'success');
     }
 }

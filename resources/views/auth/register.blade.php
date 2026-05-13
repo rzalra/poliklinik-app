@@ -1,6 +1,6 @@
 <x-layouts.guest title="Register">
 
-    <div class="card bg-white shadow-2xl rounded-2xl w-full max-w-[480px]">
+    <div class="card bg-base-100 shadow-2xl rounded-2xl w-full max-w-[480px]">
         <div class="card-body p-[40px]">
 
             {{-- Logo & Title --}}
