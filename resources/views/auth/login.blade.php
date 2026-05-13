@@ -1,6 +1,7 @@
 <x-layouts.guest title="Login">
+    <div class="min-h-screen flex items-center justify-center bg-[#1e3a8a] p-4">
 
-    <div class="card bg-base-100 shadow-2xl rounded-2xl w-full max-w-[420px]">
+    <div class="card bg-white shadow-2xl rounded-2xl w-full max-w-[420px]">
         <div class="card-body my-2 p-[40px]">
 
             {{-- Logo & Title --}}
